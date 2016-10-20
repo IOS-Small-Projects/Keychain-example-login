@@ -13,9 +13,12 @@
 		33FBD3A21DB8CA2900788830 /* Keychain_Example_Login.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33FBD3A01DB8CA2900788830 /* Keychain_Example_Login.xcdatamodeld */; };
 		33FBD3A41DB8CA2900788830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FBD3A31DB8CA2900788830 /* Assets.xcassets */; };
 		33FBD3A71DB8CA2900788830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FBD3A51DB8CA2900788830 /* LaunchScreen.storyboard */; };
+		33FBD3AF1DB8E90000788830 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 33FBD3AE1DB8E90000788830 /* Podfile */; };
+		85B5EC30AD3BAB342500F94B /* Pods_Keychain_Example_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CCCB469ACEFE0CC95E7D00 /* Pods_Keychain_Example_Login.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07CCCB469ACEFE0CC95E7D00 /* Pods_Keychain_Example_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keychain_Example_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FBD3961DB8CA2800788830 /* Keychain-Example-Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain-Example-Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FBD3991DB8CA2800788830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FBD39B1DB8CA2900788830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		33FBD3A31DB8CA2900788830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33FBD3A61DB8CA2900788830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33FBD3A81DB8CA2900788830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33FBD3AE1DB8E90000788830 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4EABF01FB3C3EF63976ED411 /* Pods-Keychain-Example-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keychain-Example-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keychain-Example-Login/Pods-Keychain-Example-Login.debug.xcconfig"; sourceTree = "<group>"; };
+		60A81566A2B05660A920ACCD /* Pods-Keychain-Example-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keychain-Example-Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keychain-Example-Login/Pods-Keychain-Example-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B5EC30AD3BAB342500F94B /* Pods_Keychain_Example_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +47,11 @@
 		33FBD38D1DB8CA2800788830 = {
 			isa = PBXGroup;
 			children = (
+				33FBD3AE1DB8E90000788830 /* Podfile */,
 				33FBD3981DB8CA2800788830 /* Keychain-Example-Login */,
 				33FBD3971DB8CA2800788830 /* Products */,
+				79D6C813FDEB247B0F06768C /* Pods */,
+				CB61E7A6062EE2FB8F255E8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +77,23 @@
 			path = "Keychain-Example-Login";
 			sourceTree = "<group>";
 		};
+		79D6C813FDEB247B0F06768C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EABF01FB3C3EF63976ED411 /* Pods-Keychain-Example-Login.debug.xcconfig */,
+				60A81566A2B05660A920ACCD /* Pods-Keychain-Example-Login.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB61E7A6062EE2FB8F255E8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07CCCB469ACEFE0CC95E7D00 /* Pods_Keychain_Example_Login.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33FBD3AB1DB8CA2900788830 /* Build configuration list for PBXNativeTarget "Keychain-Example-Login" */;
 			buildPhases = (
+				E1178B2C729B29D48370C897 /* [CP] Check Pods Manifest.lock */,
 				33FBD3921DB8CA2800788830 /* Sources */,
 				33FBD3931DB8CA2800788830 /* Frameworks */,
 				33FBD3941DB8CA2800788830 /* Resources */,
+				473859EA2EDB34AE34C81CFA /* [CP] Embed Pods Frameworks */,
+				F48F48EF78B6790653D5C5F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,11 +157,60 @@
 			files = (
 				33FBD3A71DB8CA2900788830 /* LaunchScreen.storyboard in Resources */,
 				33FBD3A41DB8CA2900788830 /* Assets.xcassets in Resources */,
+				33FBD3AF1DB8E90000788830 /* Podfile in Resources */,
 				33FBD39F1DB8CA2900788830 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		473859EA2EDB34AE34C81CFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keychain-Example-Login/Pods-Keychain-Example-Login-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1178B2C729B29D48370C897 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F48F48EF78B6790653D5C5F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keychain-Example-Login/Pods-Keychain-Example-Login-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33FBD3921DB8CA2800788830 /* Sources */ = {
@@ -253,6 +332,7 @@
 		};
 		33FBD3AC1DB8CA2900788830 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EABF01FB3C3EF63976ED411 /* Pods-Keychain-Example-Login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Keychain-Example-Login/Info.plist";
@@ -264,6 +344,7 @@
 		};
 		33FBD3AD1DB8CA2900788830 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A81566A2B05660A920ACCD /* Pods-Keychain-Example-Login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Keychain-Example-Login/Info.plist";
@@ -292,6 +373,7 @@
 				33FBD3AD1DB8CA2900788830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
