@@ -37,8 +37,8 @@ class ViewController: UIViewController {
         
         
         
-//        var username = "Rohit1"
-//        var password = "Password1"
+//        let username = "Rohit1"
+//        let password = "Password1"
 //        
 //        // store account in keychin
 //        let account = TwitterAccount(username: username, password: password)
@@ -61,11 +61,24 @@ class ViewController: UIViewController {
         //print(MyAccount(username: twigmeUsername as! String).readFromSecureStore()?.data!["password"])
         
         
-        let dictionary = Locksmith.loadDataForUserAccount(twigmeUsername as! String)
-        let password = dictionary!["password"]
+        var dictionary = Locksmith.loadDataForUserAccount(twigmeUsername as! String, inService: "myService")
+        var password = dictionary!["password"]
+        print(password!)
+        
+        // Log out 1. delete userdefault + keychain
+        userDefaults.removeObjectForKey("twigme_username")
+        do{
+            try Locksmith.deleteDataForUserAccount(twigmeUsername as! String, inService: "myService")
+
+        }catch{
+            print("Error...")
+        }
+        
+        // should not get keychain
+        dictionary = Locksmith.loadDataForUserAccount(twigmeUsername as! String, inService: "myService")
+        password = dictionary!["password"]
         print(password)
         
-     
     }
 
     override func didReceiveMemoryWarning() {
